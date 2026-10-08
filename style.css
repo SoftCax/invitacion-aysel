@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  background: linear-gradient(135deg, #f8e5ef, #eee4f8, #e2f3f5);
+
+  color: #5b3b4a;
+}
+
+
+/* TARJETA */
+
+.card {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: linear-gradient(145deg, #fff8fb, #f8e8f3, #eee5f8);
+
+  border: 2px solid #ead0df;
+  border-radius: 30px;
+
+  box-shadow: 0 15px 45px rgba(100, 65, 90, 0.18);
+
+  position: relative;
+  overflow: hidden;
+
+  animation: aparecer 1s ease;
+}
+
+
+/* GATITO */
+
+.cat {
+  width: 180px;
+  height: 180px;
+
+  margin: auto;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: #f7d8e6;
+
+  box-shadow: 0 8px 20px rgba(143, 88, 115, 0.15);
+
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.cat img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* ETIQUETA */
+
+.badge {
+  display: inline-block;
+
+  margin-top: 16px;
+
+  padding: 8px 16px;
+
+  border-radius: 50px;
+
+  background: #d9c4e9;
+  color: #5b426c;
+
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+/* TÍTULO */
+
+h1 {
+  margin: 12px 0 5px;
+
+  font-size: 26px;
+
+  color: #9c5575;
+
+  font-weight: 900;
+}
+
+.subtitle {
+  color: #76596a;
+
+  font-size: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+/* DATOS */
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detail {
+  background: #fffafc;
+
+  border: 1px solid #eddbe5;
+  border-radius: 18px;
+
+  padding: 14px;
+
+  transition: 0.3s;
+}
+
+.detail:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 18px rgba(100, 65, 90, 0.12);
+}
+
+.icon {
+  display: block;
+
+  font-size: 27px;
+
+  margin-bottom: 5px;
+}
+
+.label {
+  display: block;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: #a1778c;
+
+  font-weight: bold;
+}
+
+.detail strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 14px;
+}
+
+
+/* PISCINA */
+
+.pool {
+  margin-top: 15px;
+
+  padding: 17px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #d8eef5, #d9cfee);
+
+  border: 1px solid #d2d9e7;
+}
+
+.pool-title {
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #66547e;
+}
+
+.pool p {
+  margin-bottom: 0;
+
+  font-size: 14px;
+}
+
+
+/* BOTONES */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  flex-wrap: wrap;
+
+  margin-top: 17px;
+}
+
+button,
+.map-button {
+  min-height: 46px;
+
+  padding: 12px 17px;
+
+  border: none;
+  border-radius: 50px;
+
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.map-button {
+  background: #ead1a8;
+  color: #634d2f;
+}
+
+button {
+  background: #b96f91;
+  color: white;
+}
+
+.music-button {
+  background: #d8c4e8;
+  color: #5d466d;
+}
+
+button:hover,
+.map-button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+button:focus-visible,
+.map-button:focus-visible {
+  outline: 3px solid #9c5575;
+  outline-offset: 2px;
+}
+
+
+/* CAJAS INTERACTIVAS */
+
+.hidden-box {
+  display: none;
+
+  margin-top: 13px;
+
+  padding: 17px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  border: 1px dashed #d9b7c9;
+
+  animation: aparecer 0.5s ease;
+}
+
+.hidden-box.show {
+  display: block;
+}
+
+.big-icons {
+  font-size: 30px;
+}
+
+.hidden-box h3 {
+  color: #9c5575;
+
+  margin-bottom: 5px;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cat,
+  .hidden-box {
+    animation: none;
+  }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+  .card {
+    padding: 20px;
+  }
+
+  .cat {
+    width: 150px;
+    height: 150px;
+  }
+
+  .badge {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  button,
+  .map-button {
+    width: 100%;
+  }
+}
+
+
+/* PANTALLA DE BIENVENIDA */
+
+.oculta {
+  display: none;
+}
+
+.welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #f8e5ef, #eee4f8, #e2f3f5);
+
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.welcome.cerrada {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.welcome h2 {
+  max-width: 420px;
+
+  margin: 22px 0 8px;
+
+  font-size: 26px;
+
+  color: #9c5575;
+}
+
+.welcome p {
+  margin: 0 0 24px;
+
+  color: #76596a;
+}
+
+.open-button {
+  min-height: 54px;
+
+  padding: 14px 28px;
+
+  font-size: 17px;
+
+  animation: latido 1.8s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open-button {
+    animation: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .welcome h2 {
+    font-size: 22px;
+  }
+
+  .open-button {
+    width: auto;
+  }
+}

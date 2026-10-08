@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Invitación de Aysel - 14 años</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div id="welcome" class="welcome">
+
+    <div class="cat">
+      <img src="gato.jpg" alt="Gatito de cumpleaños">
+    </div>
+
+    <h2>Aysel te invita a su cumpleaños número 14</h2>
+
+    <p>Toca el botón para abrir tu invitación</p>
+
+    <button id="openButton" class="open-button">
+      💌 Abrir invitación
+    </button>
+
+  </div>
+
+  <div id="card" class="card oculta">
+
+    <!-- Gatito -->
+    <div class="cat">
+      <img src="gato.jpg" alt="Gatito de cumpleaños">
+    </div>
+
+    <div class="badge">
+      🎀 MIS 14 AÑOS AYSEL 🎀
+    </div>
+
+    <h1>¡ESTÁS INVITADO A MI CUMPLEAÑOS!</h1>
+
+    <p class="subtitle">
+      ✨ Será una celebración muy especial... ✨
+    </p>
+
+    <!-- Datos -->
+    <div class="details">
+
+      <div class="detail">
+        <span class="icon">📅</span>
+        <span class="label">Día</span>
+        <strong>Domingo 11 de octubre</strong>
+      </div>
+
+      <div class="detail">
+        <span class="icon">⏰</span>
+        <span class="label">Hora</span>
+        <strong>9:45 a. m.</strong>
+      </div>
+
+      <div class="detail">
+        <span class="icon">📍</span>
+        <span class="label">Lugar</span>
+        <strong>
+          Jr. El Sol 200<br>
+          Baños del Inca
+        </strong>
+      </div>
+
+      <div class="detail">
+        <span class="icon">🧭</span>
+        <span class="label">Referencia</span>
+        <strong>
+          A espaldas de la Iglesia
+          de los Mormones
+        </strong>
+      </div>
+
+    </div>
+
+    <!-- Fiesta -->
+    <div class="pool">
+      <div class="pool-title">
+        🏊‍♀️ ¡FIESTA EN LA PISCINA! 💦
+      </div>
+
+      <p>
+        Prepárate para disfrutar,
+        jugar y pasarla increíble.
+      </p>
+    </div>
+
+    <!-- Botones -->
+    <div class="buttons">
+
+      <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Jr.%20El%20Sol%20200%2C%20Ba%C3%B1os%20del%20Inca%2C%20Cajamarca%2C%20Per%C3%BA"
+        target="_blank"
+        rel="noopener">
+        📍 Ver ubicación
+      </a>
+
+      <button id="infoButton">
+        🎁 Ver indicaciones
+      </button>
+
+      <button id="musicButton" class="music-button">
+        🎵 Música
+      </button>
+
+    </div>
+
+    <!-- Información oculta -->
+    <div id="infoBox" class="hidden-box">
+
+      <div class="big-icons">
+        🎁 🩱 🩳 🩴
+      </div>
+
+      <h3>¡No olvides!</h3>
+
+      <p>
+        Trae tu <strong>regalo 🎁</strong>
+        y tu <strong>ropa de baño 🩱🩳</strong>
+        para disfrutar de la piscina.
+      </p>
+
+    </div>
+
+    <!-- Mensaje final -->
+    <div id="surpriseBox" class="hidden-box">
+
+      💗
+
+      <strong>
+        ¡Te esperamos para celebrar
+        los 14 de Aysel!
+      </strong>
+
+      💗
+
+      <p>
+        Ven con muchas ganas
+        de divertirte.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- Música de fondo (el archivo debe llamarse musica.mp3) -->
+  <audio id="musica" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
